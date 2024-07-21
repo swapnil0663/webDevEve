@@ -31,3 +31,17 @@ let cleanRoom = function() {
   //Question -> write promise chaining to win the ice cream.
   // first clean the room once the room is clean you will have some garbage then
   // removeGarbage after doing this you will have ice cream
+
+
+Answer : 
+cleanRoom().then(function(data){
+    console.log(data+"");
+    return removeGarbage(data);
+}).then(function(data){
+    console.log(data+"");
+    return winIcecream(data);
+}).then(function(data) {
+    console.log(data+"");
+}).catch(function(error){
+    console.log(error+"");
+});
